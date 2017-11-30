@@ -1,7 +1,30 @@
 {
   "presets": [
-    "es2015",
-    "react",
-    "stage-1",
+    "react", 
+    ["env", {
+      "targets": {
+        "browsers": ["last 2 versions", "safari >= 7"]
+      }
+    }]
   ],
+  "plugins": [
+    "babel-plugin-transform-class-properties",
+    "babel-plugin-transform-object-rest-spread"
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-flow-strip-types",
+        "transform-react-remove-prop-types",
+        "transform-react-constant-elements",
+        "transform-react-inline-elements"
+      ]
+    },
+    "test": {
+      "plugins": [
+        "babel-plugin-add-module-exports",
+        "dynamic-import-node"
+      ]
+    }
+  }
 }
