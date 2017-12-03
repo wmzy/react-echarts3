@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/wmzy/react-echarts3.svg?branch=master)](https://travis-ci.org/wmzy/react-echarts3)
+[![Coverage Status](https://coveralls.io/repos/github/wmzy/react-echarts3/badge.svg?branch=master)](https://coveralls.io/github/wmzy/react-echarts3?branch=master)
 # react-echarts3 
 > ECharts v3 wrapper for react.
 
