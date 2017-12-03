@@ -22,23 +22,29 @@ export default class ECahrts extends Component {
 
   static defaultProps = {
     getInstance: noop,
-    option: {},
     notMerge: false,
     lazyUpdate: false,
   };
 
   componentDidMount() {
-    const { option, notMerge, lazyUpdate, theme, initOption, getInstance } = this.props;
+    const { loading, option, notMerge, lazyUpdate, theme, initOption, getInstance, ...events } = this.props;
 
     this.instance = echarts.init(this.dom, theme, initOption);
-    this.instance.setOption(option, notMerge, lazyUpdate);
+    Object.keys(events).filter(isEventName).forEach((e) => {
+      if (typeof events[e] === 'function')
+        this.instance.on(toEChartsEventName(e), events[e]);
+    });
+    if (loading) this.instance.showLoading();
+    if (option) this.instance.setOption(option, notMerge, lazyUpdate);
     getInstance(this.instance);
   }
 
   componentWillReceiveProps({ option, notMerge, lazyUpdate, loading, ...events }) {
     if (option !== this.props.option) this.instance.setOption(option, notMerge, lazyUpdate);
-    if (loading) this.instance.showLoading();
-    this.instance.hideLoading();
+    if (loading !== this.props.loading) {
+      if (loading) this.instance.showLoading();
+      else this.instance.hideLoading();
+    }
 
     // bind or unbind events
     const props = this.props;
@@ -76,5 +82,5 @@ function toEChartsEventName(eventName) {
 }
 
 function isEventName(k) {
-  k.startsWith('on') && k.charAt(2) <= 'Z';
+  return k.startsWith('on') && k.charAt(2) <= 'Z';
 }

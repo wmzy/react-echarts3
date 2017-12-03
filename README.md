@@ -48,10 +48,6 @@ class Examples extends React.PureComponent {
 ```
 
 
-### Todos
-0. 单元测试
-
-
 ### Examples
 
 > See [example/app](https://github.com/wmzy/react-echarts3/tree/master/example/app)

@@ -4,3 +4,5 @@ node_modules
 .DS_Store
 lib/
 dist
+coverage
+test-report

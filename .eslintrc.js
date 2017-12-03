@@ -38,7 +38,6 @@ module.exports = {
     'eqeqeq': ['error', 'smart'],
     'eol-last': 'error',
     'indent': ['error', 2, {SwitchCase: 1}],
-    'id-blacklist': ['error', 'e'],
     'jsx-quotes': ['error', 'prefer-double'],
     'keyword-spacing': 'error',
     'key-spacing': 'error',
@@ -87,7 +86,6 @@ module.exports = {
 
     // React
     'react/display-name': 'error',
-    'react/jsx-boolean-value': ['error', 'always'],
     'react/jsx-closing-bracket-location': 'error',
     'react/jsx-curly-spacing': 'error',
     'react/jsx-equals-spacing': 'error',
@@ -111,11 +109,9 @@ module.exports = {
     'react/prefer-es6-class': 'off', // Wishlist, one day
     'react/prop-types': 'error',
     'react/react-in-jsx-scope': 'error',
-    'react/require-extension': 'error',
     'react/self-closing-comp': 'error',
     'react/sort-comp': 'error',
     'react/sort-prop-types': 'error',
-    'react/wrap-multilines': 'error',
     'react/jsx-indent': ['error', 2],
 
     // React Disabled
