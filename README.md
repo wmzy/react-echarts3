@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save react-echarts3
+$ npm install react-echarts3
 ```
 
 ## Usage
