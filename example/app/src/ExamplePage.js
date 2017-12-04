@@ -1,8 +1,8 @@
 import React from 'react';
 import ECharts from 'react-echarts3/dist';
-import 'echarts/lib/chart/bar';
-import 'echarts/lib/component/tooltip';
-import 'echarts/lib/component/title';
+import 'react-echarts3/node_modules/echarts/lib/chart/bar';
+import 'react-echarts3/node_modules/echarts/lib/component/tooltip';
+import 'react-echarts3/node_modules/echarts/lib/component/title';
 
 export default class Examples extends React.PureComponent {
 

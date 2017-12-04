@@ -4,7 +4,6 @@
   "private": true,
   "homepage": "https://wmzy.github.io/react-echarts3/",
   "dependencies": {
-    "echarts": "^3.8.5",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-echarts3": "file:../..",
@@ -15,11 +14,9 @@
     "start": "npm run build:less && react-scripts start",
     "build": "npm run build:less && react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "link": "linklocal"
+    "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "less": "^2.7.2",
-    "linklocal": "^2.8.1"
+    "less": "^2.7.2"
   }
 }
